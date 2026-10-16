@@ -11,7 +11,9 @@ pipeline {
 
         stage('Check Git') {
             steps {
-                sh 'git --version'
+                script {
+            for (int i = 1; i <= 5; i++) {
+                echo "Number: ${i}"
             }
         }
     }
